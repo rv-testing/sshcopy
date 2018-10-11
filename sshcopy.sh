@@ -26,4 +26,4 @@ while true; do
     esac
 done
 
-rm -f epelx linux
+rm -f linux
