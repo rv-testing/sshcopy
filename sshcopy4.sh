@@ -2,6 +2,8 @@
 
 sudo yum install sshpass -y
 
+ssh-keygen -q -f ~/.ssh/id_rsa -N ""
+
 if [ ! -f secret ]; then
    echo
    echo "Please create your secret first! (e.g. echo Your_password > secret)"
