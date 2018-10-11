@@ -11,8 +11,10 @@
 curl https://raw.githubusercontent.com/tso-testing/sshcopy/master/sshcopy7.sh | /bin/bash
 ```
 
+
+
+# To install dotnet on centos 7 
 ```
-# To install dotnet on centos 7 ********************************** BEGIN
 curl -o  /etc/yum.repos.d/centos.repo https://raw.githubusercontent.com/tso-ansible/ansible-tower/master/centos.repo
 yum clean
 wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
@@ -34,5 +36,5 @@ sudo git lfs install
 
 ./config.sh
 ./run.shy
-# To install dotnet on centos 7 ********************************** END
 ```
+
