@@ -13,7 +13,7 @@ if [ ! -f secret ]; then
 fi
 
 pass=$(cat secret)
-awk -F' ' ' { print  $1 }' hosts > sshcopy
+awk -F' ' 'FNR > 2 { print  $2 }' /etc/hosts > sshcopy
 awk NF sshcopy > linux
 awk -v password="$pass" '{print "sshpass -p " password " ssh-copy-id -o StrictHostKeyChecking=no " $1}' linux > sshcopy
 chmod u+x sshcopy
