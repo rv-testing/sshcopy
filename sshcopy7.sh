@@ -19,4 +19,4 @@ awk -v password="$pass" '{print "sshpass -p " password " ssh-copy-id -o StrictHo
 chmod u+x sshcopy
 ./sshcopy
 
-rm -f linux copy
+rm -f linux copy sshcopy
