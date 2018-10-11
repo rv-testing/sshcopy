@@ -2,7 +2,9 @@
 
 sudo yum install sshpass -y
 
-ssh-keygen -q -f ~/.ssh/id_rsa -N ""
+if [ ! -f ~/.ssh/id_rsa ]; then
+	ssh-keygen -q -f ~/.ssh/id_rsa -N ""
+fi
 
 if [ ! -f secret ]; then
    echo
