@@ -1,6 +1,9 @@
 #/bin/bash
 
-sudo yum install sshpass -y
+rpm -qa sshpass > epelx
+if [[ ! -s epelx ]]; then
+   sudo yum install sshpass -y
+fi
 
 if [ ! -f ~/.ssh/id_rsa ]; then
 	ssh-keygen -q -f ~/.ssh/id_rsa -N ""
@@ -19,4 +22,4 @@ awk -v password="$pass" '{print "sshpass -p " password " ssh-copy-id -o StrictHo
 chmod u+x sshcopy
 ./sshcopy
 
-rm -f linux copy sshcopy
+rm -f linux sshcopy epelx
