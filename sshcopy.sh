@@ -1,9 +1,6 @@
 #/bin/bash
 
-rpm -qa sshpass > epelx
-if [[ ! -s epelx ]]; then
-   sudo yum install sshpass -y
-fi
+sudo yum install sshpass -y
 
 while true; do
     read -p "Do you want to copy the ssh to the client(y/n)?" yn
