@@ -1,5 +1,4 @@
 #/bin/bash
-set -x
 
 rpm -qa sshpass > epelx
 if [[ ! -s epelx ]]; then
@@ -29,3 +28,5 @@ while true; do
         * ) echo "Please answer yes or no.";;
     esac
 done
+
+rm -f epelx linux
