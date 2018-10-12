@@ -1,5 +1,7 @@
 #/bin/bash
 
+cd ~/
+
 rpm -qa sshpass > epelx
 if [[ ! -s epelx ]]; then
    sudo yum install sshpass -y
